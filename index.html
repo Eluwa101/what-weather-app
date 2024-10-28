@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What-Weather App</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>What-Weather App</h1>
+        <input type="text" id="city-search" placeholder="Enter city name...">
+        <button id="search-btn">Search by City</button>
+        <button id="location-btn">Use My Location</button>
+        
+        <div id="coord-input">
+            <input type="number" id="latitude-input" placeholder="Enter lat">
+            <input type="number" id="longitude-input" placeholder="Enter lon">
+            <button id="coord-search-btn">Search by Coordinates</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="error-message" class="error" style="display: none;"></div>
+        <section id="current-weather" class="weather-display">
+        </section>
+        <section id="forecast-weather" class="forecast-display">
+            
+        </section>
+    </main>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+<footer>&copy;Eluwa Monday 2024 What-Weather App</footer>
+</html>
