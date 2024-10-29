@@ -4,7 +4,7 @@ import { displayCurrentWeather, displayError } from './modules/ui.js';
 import { handleApiError, handleGeolocationError } from './modules/errorHandler.js';
 import { getUserCoordinates } from './modules/geolocation.js';
 
-// Fetch and display weather by city
+// Fetch and display weather by a city of choice
 async function fetchAndDisplayWeather(city) {
     try {
         const weatherData = await getCurrentWeather(city);
@@ -14,7 +14,7 @@ async function fetchAndDisplayWeather(city) {
     }
 }
 
-// Fetch and display weather by location (geolocation)
+// Fetch and display weather by my locatoin or users location (geolocation)
 function fetchAndDisplayWeatherByLocation() {
     getUserCoordinates(
         async (latitude, longitude) => {
@@ -29,12 +29,11 @@ function fetchAndDisplayWeatherByLocation() {
     );
 }
 
-// Fetch and display weather based on user-input coordinates
+// Fetch and display weather based on user-input of certain coordinates of choice
 async function fetchAndDisplayWeatherByCoords() {
     const latitude = parseFloat(document.getElementById('latitude-input').value);
     const longitude = parseFloat(document.getElementById('longitude-input').value);
 
-    // Validate coordinates
     if (isNaN(latitude) || isNaN(longitude)) {
         displayError('Please enter valid coordinates.');
         return;

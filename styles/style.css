@@ -1,0 +1,35 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    padding: 8px;
+    margin-right: 5px;
+}
+
+button {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.weather-display, .forecast-display {
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
