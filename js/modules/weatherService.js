@@ -28,3 +28,16 @@ export async function getWeatherByCoords(lat, lon) {
         throw error;
     }
 }
+
+export async function getForecast(lat, lon) {
+    const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&exclude=current,minutely,hourly,alerts&appid=${apiKey}&units=metric`;
+    try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('Forecast data not available');
+        const data = await response.json();
+        return data.daily;
+    } catch (error) {
+        console.error('Error fetching forecast data:', error);
+        throw error;
+    }
+}

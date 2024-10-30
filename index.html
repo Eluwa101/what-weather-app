@@ -9,27 +9,50 @@
 <body>
     <header>
         <h1>What-Weather App</h1>
-        <input type="text" id="city-search" placeholder="Enter city name...">
-        <button id="search-btn">Search by City</button>
+    </header>
+
+    <nav class="menu-bar">
+        <input type="text" id="city-search" placeholder="Enter location name...">
+        <button id="search-btn">Search</button>
         <button id="location-btn">Use My Location</button>
         
         <div id="coord-input">
-            <input type="number" id="latitude-input" placeholder="Enter lat">
-            <input type="number" id="longitude-input" placeholder="Enter lon">
+            <input type="number" id="latitude-input" placeholder="Enter latitude">
+            <input type="number" id="longitude-input" placeholder="Enter longitude">
             <button id="coord-search-btn">Search by Coordinates</button>
         </div>
-    </header>
 
+        <div id="favorites-dropdown">
+            <button id="favorites-toggle">Favs ≡</button>
+            <div id="favorites-menu" class="dropdown-content" style="display: none;">
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-image">
+        <img src="assets/images/freepik-export-20241029145101FfKH.png" alt="Beautiful Weather Landscape">
+    </div>
+
+    <!-- Main Content Area -->
     <main>
         <div id="error-message" class="error" style="display: none;"></div>
+        
         <section id="current-weather" class="weather-display">
         </section>
-        <section id="forecast-weather" class="forecast-display">
+
+        <section class="forecast-container">
+            <div id="three-day-forecast" class="forecast-box">
+
+            </div>
             
+            <div id="seven-day-forecast" class="forecast-box">
+
+            </div>
         </section>
+
     </main>
 
     <script type="module" src="js/app.js"></script>
 </body>
-<footer>&copy;Eluwa Monday 2024 What-Weather App</footer>
+<footer> &copy; Eluwa 2024</footer>
 </html>

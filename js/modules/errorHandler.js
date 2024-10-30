@@ -1,10 +1,9 @@
 // errorHandler.js
-
 import { displayError } from './ui.js';
 
 export function handleApiError(error) {
     console.error('API Error:', error);
-    displayError('Failed to load weather data. Please try again later.');
+    displayError('');
 }
 
 export function handleGeolocationError(error) {
